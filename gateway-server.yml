@@ -12,7 +12,14 @@ eureka:
 
 spring:
     cloud:
+        loadbalancer.ribbon.enabled: false
         gateway:
             discovery.locator:
                 enabled: true
                 lowerCaseServiceId: true
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
